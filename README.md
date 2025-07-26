@@ -1,2 +1,2 @@
 # menu
-Başkarcı Pastanesi Menü Sitesi
+Başkarcı Pastanesi Menü
