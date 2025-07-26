@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Başkarci Pastahanesi - QR Menü">
+    <meta name="theme-color" content="#8B4513">
+    <title>Başkarci Pastahanesi - Menü</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <h1 class="business-name">BAŞKARCI PASTAHANESİ - MENÜ</h1>
+            <div class="header-separator"></div>
+        </header>
+
+        <!-- Category Navigation -->
+        <nav class="category-nav">
+            <div class="category-tabs">
+                <button class="category-tab active" data-category="tatlilar">
+                    Tatlılar
+                </button>
+                <button class="category-tab" data-category="soguk-icecekler">
+                    Soğuk İçecekler
+                </button>
+                <button class="category-tab" data-category="sicak-icecekler">
+                    Sıcak İçecekler
+                </button>
+                <button class="category-tab" data-category="pastalar">
+                    Pastalar
+                </button>
+                <button class="category-tab" data-category="kurabiyeler">
+                    Kurabiyeler
+                </button>
+            </div>
+        </nav>
+
+        <!-- Menu Items Section -->
+        <main class="menu-content">
+            <div id="menu-items" class="menu-items">
+                <!-- Menu items will be loaded here dynamically -->
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
