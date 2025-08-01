@@ -1,363 +1,233 @@
-// Menu Data - Gerçek menü verilerinizle değiştirebilirsiniz
-const menuData = {
-    tatlilar: [
-        {
-            name: "Çikolatalı Sufle",
-            description: "Sıcak çikolata sosu ile servis edilen yumuşak sufle",
-            price: 45.00
-        },
-        {
-            name: "Tiramisu",
-            description: "İtalyan usulü kahveli tiramisu, kakao tozu ile",
-            price: 55.00
-        },
-        {
-            name: "Cheesecake",
-            description: "New York usulü krem peynirli cheesecake",
-            price: 50.00
-        },
-        {
-            name: "Profiterol",
-            description: "Çikolata sosu ile kaplı 6 adet profiterol",
-            price: 40.00
-        },
-        {
-            name: "Baklava",
-            description: "Geleneksel Türk baklavası, fıstık ile",
-            price: 60.00
-        },
-        {
-            name: "Künefe",
-            description: "Antep fıstığı ile süslenmiş künefe",
-            price: 65.00
-        },
-        {
-            name: "Kazandibi",
-            description: "Geleneksel Türk tatlısı kazandibi",
-            price: 45.00
-        },
-        {
-            name: "Sütlaç",
-            description: "Fırında pişirilmiş geleneksel sütlaç",
-            price: 35.00
-        },
-        {
-            name: "Aşure",
-            description: "Geleneksel aşure, kuru meyveler ile",
-            price: 30.00
-        },
-        {
-            name: "Kemalpaşa",
-            description: "Şerbetli tatlı kemalpaşa",
-            price: 25.00
-        },
-        {
-            name: "Künefe",
-            description: "Antep fıstığı ile süslenmiş künefe",
-            price: 65.00
-        },
-        {
-            name: "Revani",
-            description: "Şerbetli revani tatlısı",
-            price: 30.00
-        }
-    ],
-    "soguk-icecekler": [
-        {
-            name: "Limonata",
-            description: "Taze sıkılmış limon suyu ile hazırlanmış limonata",
-            price: 25.00
-        },
-        {
-            name: "Ayran",
-            description: "Taze ve soğuk ayran",
-            price: 15.00
-        },
-        {
-            name: "Meyve Suyu",
-            description: "Portakal, elma veya şeftali suyu",
-            price: 20.00
-        },
-        {
-            name: "Soğuk Çay",
-            description: "Limon dilimi ile servis edilen soğuk çay",
-            price: 18.00
-        },
-        {
-            name: "Milkshake",
-            description: "Çikolata, vanilya veya çilek aromalı milkshake",
-            price: 35.00
-        },
-        {
-            name: "Smoothie",
-            description: "Taze meyveler ile hazırlanmış smoothie",
-            price: 40.00
-        },
-        {
-            name: "Buzlu Kahve",
-            description: "Soğuk demlenmiş buzlu kahve",
-            price: 32.00
-        },
-        {
-            name: "Kola",
-            description: "Soğuk kola",
-            price: 18.00
-        },
-        {
-            name: "Gazoz",
-            description: "Geleneksel Türk gazozu",
-            price: 16.00
-        },
-        {
-            name: "Şalgam Suyu",
-            description: "Acılı şalgam suyu",
-            price: 14.00
-        },
-        {
-            name: "Boza",
-            description: "Geleneksel boza içeceği",
-            price: 22.00
-        },
-        {
-            name: "Sahlep",
-            description: "Tarçın ile servis edilen sahlep",
-            price: 28.00
-        }
-    ],
-    "sicak-icecekler": [
-        {
-            name: "Türk Çayı",
-            description: "Demli Türk çayı, şeker ile servis edilir",
-            price: 12.00
-        },
-        {
-            name: "Espresso",
-            description: "Tek shot espresso",
-            price: 18.00
-        },
-        {
-            name: "Cappuccino",
-            description: "Süt köpüğü ile hazırlanmış cappuccino",
-            price: 25.00
-        },
-        {
-            name: "Latte",
-            description: "Süt ile hazırlanmış yumuşak latte",
-            price: 28.00
-        },
-        {
-            name: "Sıcak Çikolata",
-            description: "Krema ile servis edilen sıcak çikolata",
-            price: 30.00
-        },
-        {
-            name: "Americano",
-            description: "Sıcak su ile inceltilmiş espresso",
-            price: 20.00
-        },
-        {
-            name: "Mocha",
-            description: "Çikolata sosu ile hazırlanmış mocha",
-            price: 32.00
-        },
-        {
-            name: "Macchiato",
-            description: "Süt köpüğü ile işaretlenmiş espresso",
-            price: 22.00
-        },
-        {
-            name: "Filtre Kahve",
-            description: "Geleneksel filtre kahve",
-            price: 16.00
-        },
-        {
-            name: "Türk Kahvesi",
-            description: "Geleneksel Türk kahvesi",
-            price: 24.00
-        },
-        {
-            name: "Sahlep",
-            description: "Tarçın ile servis edilen sıcak sahlep",
-            price: 28.00
-        },
-        {
-            name: "Ada Çayı",
-            description: "Şifalı ada çayı",
-            price: 15.00
-        },
-        {
-            name: "Ihlamur",
-            description: "Doğal ıhlamur çayı",
-            price: 14.00
-        },
-        {
-            name: "Kuşburnu",
-            description: "C vitamini deposu kuşburnu çayı",
-            price: 16.00
-        }
-    ],
-    pastalar: [
-        {
-            name: "Çikolatalı Pasta",
-            description: "Çikolata kreması ile kaplı katmanlı pasta",
-            price: 75.00
-        },
-        {
-            name: "Meyveli Pasta",
-            description: "Taze meyveler ile süslenmiş krema pastası",
-            price: 70.00
-        },
-        {
-            name: "Red Velvet",
-            description: "Krem peynir kreması ile red velvet pasta",
-            price: 80.00
-        },
-        {
-            name: "Karışık Pasta",
-            description: "Çeşitli meyve ve kremalarla hazırlanmış pasta",
-            price: 85.00
-        },
-        {
-            name: "Tiramisu Pasta",
-            description: "Kahveli tiramisu pastası",
-            price: 90.00
-        },
-        {
-            name: "Cheesecake Pasta",
-            description: "Krem peynirli cheesecake pastası",
-            price: 88.00
-        },
-        {
-            name: "Meyve Pasta",
-            description: "Çilek, böğürtlen ve ahududu ile",
-            price: 82.00
-        },
-        {
-            name: "Çikolata Fındık Pasta",
-            description: "Fındık kreması ile çikolata pastası",
-            price: 78.00
-        },
-        {
-            name: "Vanilya Pasta",
-            description: "Vanilya kreması ile sade pasta",
-            price: 72.00
-        },
-        {
-            name: "Kahve Pasta",
-            description: "Kahve aromalı krema pastası",
-            price: 76.00
-        },
-        {
-            name: "Limon Pasta",
-            description: "Limon kreması ile ferahlatıcı pasta",
-            price: 74.00
-        },
-        {
-            name: "Muzlu Pasta",
-            description: "Muz ve karamel soslu pasta",
-            price: 80.00
-        }
-    ],
-    kurabiyeler: [
-        {
-            name: "Çikolatalı Kurabiye",
-            description: "Çikolata parçacıklı yumuşak kurabiye",
-            price: 8.00
-        },
-        {
-            name: "Yulaflı Kurabiye",
-            description: "Sağlıklı yulaflı kurabiye",
-            price: 6.00
-        },
-        {
-            name: "Kurabiye Karışımı",
-            description: "6 adet karışık kurabiye",
-            price: 35.00
-        },
-        {
-            name: "Fındıklı Kurabiye",
-            description: "Fındık ezmesi ile hazırlanmış kurabiye",
-            price: 10.00
-        },
-        {
-            name: "Cevizli Kurabiye",
-            description: "Ceviz parçacıklı geleneksel kurabiye",
-            price: 9.00
-        },
-        {
-            name: "Bademli Kurabiye",
-            description: "Badem unu ile hazırlanmış kurabiye",
-            price: 12.00
-        },
-        {
-            name: "Limonlu Kurabiye",
-            description: "Limon aromalı ferahlatıcı kurabiye",
-            price: 7.00
-        },
-        {
-            name: "Tarçınlı Kurabiye",
-            description: "Tarçın aromalı kurabiye",
-            price: 8.00
-        },
-        {
-            name: "Kakao Kurabiye",
-            description: "Kakao tozu ile hazırlanmış kurabiye",
-            price: 9.00
-        },
-        {
-            name: "Hindistan Cevizi Kurabiye",
-            description: "Hindistan cevizi ile süslenmiş kurabiye",
-            price: 11.00
-        },
-        {
-            name: "Muzlu Kurabiye",
-            description: "Muz parçacıklı yumuşak kurabiye",
-            price: 10.00
-        },
-        {
-            name: "Kurabiye Seti",
-            description: "12 adet karışık kurabiye seti",
-            price: 65.00
-        },
-        {
-            name: "Glutensiz Kurabiye",
-            description: "Gluten alerjisi olanlar için özel kurabiye",
-            price: 15.00
-        },
-        {
-            name: "Vegan Kurabiye",
-            description: "Vegan beslenme için özel kurabiye",
-            price: 13.00
-        }
-    ]
-};
+// Menu Data - CSV'den dinamik olarak yüklenecek
+let menuData = {};
+let categories = [];
 
-// DOM Elements
-const menuItemsContainer = document.getElementById('menu-items');
-const categoryTabs = document.querySelectorAll('.category-tab');
+// CSV dosyasından veri yükleme fonksiyonu
+async function loadMenuFromCSV() {
+    try {
+        // Config'den CSV URL'sini al ve önbellek önlemek için timestamp ekle
+        const timestamp = Date.now();
+        const csvUrl = CONFIG.CSV_URL + (CONFIG.CSV_URL.includes('?') ? '&' : '?') + 't=' + timestamp;
+        
+        // Debug logları production'da kaldırıldı
+        
+        // CSV dosyasını fetch ile yükle - önbellek kontrolü ile
+        const response = await fetch(csvUrl, {
+            cache: 'no-cache',
+            headers: {
+                'Cache-Control': 'no-cache, no-store, must-revalidate',
+                'Pragma': 'no-cache',
+                'Expires': '0'
+            }
+        });
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        
+        const csvText = await response.text();
+        const menuItems = parseCSV(csvText);
+        
+        // Debug logları production'da kaldırıldı
+        
+        // Kategorileri ve menü verilerini organize et
+        organizeMenuData(menuItems);
+        
+        // Debug logları production'da kaldırıldı
+        
+        // Kategorileri yükle ve ilk kategoriyi seç
+        loadCategories();
+        
+    } catch (error) {
+        console.error('CSV yükleme hatası:', error);
+        
+        // Analytics tracking
+        trackError('csv_load_error', error.message);
+        
+        // Daha detaylı hata mesajları
+        if (error.name === 'TypeError' && error.message.includes('fetch')) {
+            showErrorState('Ağ bağlantısı hatası. Lütfen internet bağlantınızı kontrol edin.');
+        } else if (error.message.includes('404')) {
+            showErrorState('Menü dosyası bulunamadı. Lütfen daha sonra tekrar deneyin.');
+        } else {
+            showErrorState('Beklenmeyen bir hata oluştu. Lütfen sayfayı yenileyin.');
+        }
+    }
+}
 
-// Current active category
-let currentCategory = 'tatlilar';
+// CSV metnini parse etme fonksiyonu - Tüm alanlar tırnak içinde
+function parseCSV(csvText) {
+    const lines = csvText.trim().split('\n');
+    const items = [];
+    
+    for (let i = 0; i < lines.length; i++) {
+        const line = lines[i];
+        const values = [];
+        let current = '';
+        let inQuotes = false;
+        
+        for (let j = 0; j < line.length; j++) {
+            const char = line[j];
+            
+            if (char === '"') {
+                inQuotes = !inQuotes;
+            } else if (char === ',' && !inQuotes) {
+                values.push(current.trim());
+                current = '';
+            } else {
+                current += char;
+            }
+        }
+        values.push(current.trim());
+        
+        // İlk satır header ise, header'ı oluştur
+        if (i === 0) {
+            const headers = values.map(v => v.replace(/"/g, ''));
+            continue;
+        }
+        
+        // Veri satırları için
+        const item = {};
+        const headers = ['kategori', 'urun_adi', 'aciklama', 'fiyat'];
+        
+        headers.forEach((header, index) => {
+            let value = values[index] || '';
+            // Tırnak işaretlerini kaldır
+            value = value.replace(/"/g, '');
+            item[header] = value;
+        });
+        
+        items.push(item);
+    }
+    
+    return items;
+}
 
-// Initialize the application
-document.addEventListener('DOMContentLoaded', function() {
-    loadMenuItems(currentCategory);
-    setupEventListeners();
-});
-
-// Setup event listeners
-function setupEventListeners() {
-    categoryTabs.forEach(tab => {
-        tab.addEventListener('click', function() {
-            const category = this.getAttribute('data-category');
-            switchCategory(category);
+// Menü verilerini kategorilere göre organize etme
+function organizeMenuData(menuItems) {
+    menuData = {};
+    categories = [];
+    
+    menuItems.forEach(item => {
+        const category = item.kategori;
+        
+        // Kategori listesine ekle (tekrar etmesin)
+        if (!categories.includes(category)) {
+            categories.push(category);
+        }
+        
+        // Menü verilerine ekle
+        if (!menuData[category]) {
+            menuData[category] = [];
+        }
+        
+        const price = parseFloat(item.fiyat);
+        
+        // Fiyat parse hatası kontrolü
+        if (isNaN(price)) {
+            console.warn(`Fiyat parse hatası: "${item.urun_adi}" - "${item.fiyat}"`);
+        }
+        
+        menuData[category].push({
+            name: item.urun_adi,
+            description: item.aciklama,
+            price: price
         });
     });
 }
 
-// Switch between categories
+// Kategorileri dinamik olarak yükleme
+function loadCategories() {
+    const categoryTabsContainer = document.querySelector('.category-tabs');
+    
+    if (!categoryTabsContainer || categories.length === 0) {
+        showErrorState();
+        return;
+    }
+    
+    // Mevcut kategorileri temizle
+    categoryTabsContainer.innerHTML = '';
+    
+    // Yeni kategorileri ekle
+    categories.forEach((category, index) => {
+        const categoryTab = document.createElement('button');
+        categoryTab.className = 'category-tab';
+        categoryTab.setAttribute('data-category', category);
+        categoryTab.textContent = category;
+        
+        // İlk kategoriyi aktif yap
+        if (index === 0) {
+            categoryTab.classList.add('active');
+        }
+        
+        categoryTabsContainer.appendChild(categoryTab);
+    });
+    
+    // Event listener'ları yeniden ekle
+    setupEventListeners();
+    
+    // İlk kategoriyi yükle
+    if (categories.length > 0) {
+        switchCategory(categories[0]);
+    }
+}
+
+// Hata durumu gösterme - Güvenli versiyon
+function showErrorState(message = 'Menü yüklenirken hata oluştu. Lütfen sayfayı yenileyin veya daha sonra tekrar deneyin.') {
+    const menuItemsContainer = document.getElementById('menu-items');
+    if (menuItemsContainer) {
+        // Önce container'ı temizle
+        menuItemsContainer.innerHTML = '';
+        
+        // Güvenli şekilde DOM oluştur
+        const errorDiv = document.createElement('div');
+        errorDiv.className = 'empty-state';
+        
+        const titleH3 = document.createElement('h3');
+        titleH3.textContent = 'Hata';
+        
+        const messageP = document.createElement('p');
+        messageP.textContent = message;
+        
+        const retryButton = document.createElement('button');
+        retryButton.className = 'retry-button';
+        retryButton.textContent = 'Tekrar Dene';
+        retryButton.addEventListener('click', () => location.reload());
+        
+        errorDiv.appendChild(titleH3);
+        errorDiv.appendChild(messageP);
+        errorDiv.appendChild(retryButton);
+        
+        menuItemsContainer.appendChild(errorDiv);
+    }
+}
+
+// DOM elementlerini seç
+const menuItemsContainer = document.getElementById('menu-items');
+let categoryTabs = document.querySelectorAll('.category-tab');
+let currentCategory = '';
+
+// Event listener'ları kur - Memory leak önlendi
+function setupEventListeners() {
+    // Önceki event listener'ları temizle
+    categoryTabs.forEach(tab => {
+        tab.removeEventListener('click', handleCategoryClick);
+    });
+    
+    categoryTabs = document.querySelectorAll('.category-tab');
+    categoryTabs.forEach(tab => {
+        tab.addEventListener('click', handleCategoryClick);
+    });
+}
+
+// Event handler fonksiyonu - ayrı tanımlandı
+function handleCategoryClick() {
+    const category = this.getAttribute('data-category');
+    switchCategory(category);
+}
+
+// Kategori değiştirme
 function switchCategory(category) {
-    // Update active tab
+    // Aktif tab'ı güncelle
     categoryTabs.forEach(tab => {
         tab.classList.remove('active');
         if (tab.getAttribute('data-category') === category) {
@@ -365,176 +235,141 @@ function switchCategory(category) {
         }
     });
 
-    // Update current category
+    // Mevcut kategoriyi güncelle
     currentCategory = category;
 
-    // Load menu items for the selected category
-    loadMenuItems(category);
+    // Analytics tracking
+    const itemCount = menuData[category] ? menuData[category].length : 0;
+    trackCategoryView(category, itemCount);
 
-    // Scroll active tab into view
-    scrollActiveTabIntoView();
+    // Menü öğelerini yükle
+    loadMenuItems(category);
 
     // Smooth scroll to top
     window.scrollTo({
         top: 0,
         behavior: 'smooth'
     });
+
+    // Auto-scroll category tab to center on mobile
+    scrollActiveTabToRight();
 }
 
-// Scroll active tab into view
-function scrollActiveTabIntoView() {
-    const activeTab = document.querySelector('.category-tab.active');
-    const categoryTabsContainer = document.querySelector('.category-tabs');
+// Menü öğelerini yükle
+function loadMenuItems(category) {
+    // Loading durumunu göster
+    showLoading();
+
+    // Performans için setTimeout kaldırıldı
+    const items = menuData[category] || [];
     
-    if (activeTab && categoryTabsContainer) {
-        const containerRect = categoryTabsContainer.getBoundingClientRect();
-        const tabRect = activeTab.getBoundingClientRect();
-        
-        // Check if tab is outside the visible area
-        const isTabLeftOfContainer = tabRect.left < containerRect.left;
-        const isTabRightOfContainer = tabRect.right > containerRect.right;
-        
-        if (isTabLeftOfContainer || isTabRightOfContainer) {
-            // Calculate scroll position to center the active tab
-            const scrollLeft = activeTab.offsetLeft - (categoryTabsContainer.offsetWidth / 2) + (activeTab.offsetWidth / 2);
-            
-            categoryTabsContainer.scrollTo({
-                left: scrollLeft,
-                behavior: 'smooth'
-            });
-        }
+    if (items.length === 0) {
+        showEmptyState();
+    } else {
+        renderMenuItems(items);
     }
 }
 
-// Load menu items for a specific category
-function loadMenuItems(category) {
-    // Show loading state
-    showLoading();
-
-    // Simulate loading delay for better UX
-    setTimeout(() => {
-        const items = menuData[category] || [];
-        
-        if (items.length === 0) {
-            showEmptyState();
-        } else {
-            renderMenuItems(items);
-        }
-    }, 300);
-}
-
-// Show loading state
+// Loading durumu gösterme - Güvenli versiyon
 function showLoading() {
-    menuItemsContainer.innerHTML = `
-        <div class="loading">
-            <div class="spinner"></div>
-        </div>
-    `;
+    menuItemsContainer.innerHTML = '';
+    
+    const loadingDiv = document.createElement('div');
+    loadingDiv.className = 'loading';
+    
+    const spinnerDiv = document.createElement('div');
+    spinnerDiv.className = 'spinner';
+    
+    loadingDiv.appendChild(spinnerDiv);
+    menuItemsContainer.appendChild(loadingDiv);
 }
 
-// Show empty state
+// Boş durum gösterme - Güvenli versiyon
 function showEmptyState() {
-    menuItemsContainer.innerHTML = `
-        <div class="empty-state">
-            <h3>Bu kategoride henüz ürün bulunmuyor</h3>
-            <p>Lütfen başka bir kategori seçin.</p>
-        </div>
-    `;
+    menuItemsContainer.innerHTML = '';
+    
+    const emptyDiv = document.createElement('div');
+    emptyDiv.className = 'empty-state';
+    
+    const titleH3 = document.createElement('h3');
+    titleH3.textContent = 'Bu kategoride henüz ürün bulunmuyor';
+    
+    const messageP = document.createElement('p');
+    messageP.textContent = 'Lütfen başka bir kategori seçin.';
+    
+    emptyDiv.appendChild(titleH3);
+    emptyDiv.appendChild(messageP);
+    menuItemsContainer.appendChild(emptyDiv);
 }
 
-// Render menu items
+// Menü öğelerini render etme - Güvenli versiyon
 function renderMenuItems(items) {
-    const itemsHTML = items.map(item => `
-        <div class="menu-item" tabindex="0">
-            <div class="menu-item-header">
-                <h3 class="menu-item-name">${escapeHtml(item.name)}</h3>
-                <span class="menu-item-price">${formatPrice(item.price)} ₺</span>
-            </div>
-            <p class="menu-item-description">${escapeHtml(item.description)}</p>
-        </div>
-    `).join('');
-
-    menuItemsContainer.innerHTML = itemsHTML;
+    // Önce container'ı temizle
+    menuItemsContainer.innerHTML = '';
+    
+    // DocumentFragment kullanarak performansı artır
+    const fragment = document.createDocumentFragment();
+    
+    items.forEach(item => {
+        const menuItemDiv = document.createElement('div');
+        menuItemDiv.className = 'menu-item';
+        
+        const headerDiv = document.createElement('div');
+        headerDiv.className = 'menu-item-header';
+        
+        const nameH3 = document.createElement('h3');
+        nameH3.className = 'menu-item-name';
+        nameH3.textContent = item.name; // textContent güvenli
+        
+        const priceSpan = document.createElement('span');
+        priceSpan.className = 'menu-item-price';
+        priceSpan.textContent = `${formatPrice(item.price)} ₺`;
+        
+        const descriptionP = document.createElement('p');
+        descriptionP.className = 'menu-item-description';
+        descriptionP.textContent = item.description; // textContent güvenli
+        
+        headerDiv.appendChild(nameH3);
+        headerDiv.appendChild(priceSpan);
+        menuItemDiv.appendChild(headerDiv);
+        menuItemDiv.appendChild(descriptionP);
+        
+        fragment.appendChild(menuItemDiv);
+    });
+    
+    menuItemsContainer.appendChild(fragment);
 }
 
-// Format price with Turkish Lira symbol
+// Fiyat formatı
 function formatPrice(price) {
     return price.toFixed(2).replace('.', ',');
 }
 
-// Escape HTML to prevent XSS
-function escapeHtml(text) {
-    const div = document.createElement('div');
-    div.textContent = text;
-    return div.innerHTML;
+// Auto-scroll active category tab to center on mobile
+function scrollActiveTabToRight() {
+    // Only apply on mobile (screen width < 768px)
+    if (window.innerWidth >= 768) return;
+
+    const categoryTabsContainer = document.querySelector('.category-tabs');
+    const activeTab = document.querySelector('.category-tab.active');
+    
+    if (!categoryTabsContainer || !activeTab) return;
+
+    // Get container and tab dimensions
+    const containerWidth = categoryTabsContainer.offsetWidth;
+    const tabLeft = activeTab.offsetLeft;
+    const tabWidth = activeTab.offsetWidth;
+    
+    // Calculate center position for the active tab
+    const centerPosition = (containerWidth - tabWidth) / 2;
+    const scrollAmount = tabLeft - centerPosition;
+    
+    // Scroll the active tab to center
+    categoryTabsContainer.scrollTo({
+        left: scrollAmount,
+        behavior: 'smooth'
+    });
 }
-
-// Add touch support for mobile devices
-function addTouchSupport() {
-    let startX = 0;
-    let endX = 0;
-    let isScrolling = false;
-    let touchStartTime = 0;
-
-    document.addEventListener('touchstart', function(e) {
-        startX = e.touches[0].clientX;
-        touchStartTime = Date.now();
-        isScrolling = false;
-    });
-
-    document.addEventListener('touchmove', function(e) {
-        // Check if user is scrolling the category tabs
-        const categoryNav = document.querySelector('.category-nav');
-        if (categoryNav && categoryNav.contains(e.target)) {
-            isScrolling = true;
-        }
-    });
-
-    document.addEventListener('touchend', function(e) {
-        endX = e.changedTouches[0].clientX;
-        const touchDuration = Date.now() - touchStartTime;
-        
-        // Only handle swipe if not scrolling and touch duration is short (quick swipe)
-        if (!isScrolling && touchDuration < 300) {
-            handleSwipe();
-        }
-    });
-
-    function handleSwipe() {
-        const swipeThreshold = 50;
-        const diff = startX - endX;
-
-        if (Math.abs(diff) > swipeThreshold) {
-            const categories = Object.keys(menuData);
-            const currentIndex = categories.indexOf(currentCategory);
-            
-            if (diff > 0 && currentIndex < categories.length - 1) {
-                // Swipe left - next category
-                switchCategory(categories[currentIndex + 1]);
-            } else if (diff < 0 && currentIndex > 0) {
-                // Swipe right - previous category
-                switchCategory(categories[currentIndex - 1]);
-            }
-        }
-    }
-}
-
-// Initialize touch support
-addTouchSupport();
-
-// Add keyboard navigation support
-document.addEventListener('keydown', function(e) {
-    const categories = Object.keys(menuData);
-    const currentIndex = categories.indexOf(currentCategory);
-
-    if (e.key === 'ArrowLeft' && currentIndex > 0) {
-        e.preventDefault();
-        switchCategory(categories[currentIndex - 1]);
-    } else if (e.key === 'ArrowRight' && currentIndex < categories.length - 1) {
-        e.preventDefault();
-        switchCategory(categories[currentIndex + 1]);
-    }
-});
 
 // Performance optimization: Debounce scroll events
 function debounce(func, wait) {
@@ -549,35 +384,57 @@ function debounce(func, wait) {
     };
 }
 
-// Add scroll-based animations
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
 
-const observer = new IntersectionObserver(function(entries) {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-        }
-    });
-}, observerOptions);
 
-// Observe menu items for animation
-function observeMenuItems() {
-    const menuItems = document.querySelectorAll('.menu-item');
-    menuItems.forEach(item => {
-        item.style.opacity = '0';
-        item.style.transform = 'translateY(20px)';
-        item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        observer.observe(item);
+// Animation removed - items load all at once
+
+// Analytics Tracking Functions
+function trackEvent(eventName, parameters = {}) {
+    if (typeof gtag !== 'undefined') {
+        gtag('event', eventName, parameters);
+    }
+    
+    // Console log for debugging - Production'da kaldırıldı
+}
+
+function trackCategoryView(categoryName, itemCount) {
+    trackEvent('category_view', {
+        category_name: categoryName,
+        item_count: itemCount,
+        event_category: 'menu_interaction'
     });
 }
 
-// Call observe function after rendering
-const originalRenderMenuItems = renderMenuItems;
-renderMenuItems = function(items) {
-    originalRenderMenuItems(items);
-    setTimeout(observeMenuItems, 100);
-}; 
+function trackError(errorType, errorMessage) {
+    trackEvent('error', {
+        error_type: errorType,
+        error_message: errorMessage,
+        event_category: 'error'
+    });
+}
+
+function trackPageLoad() {
+    trackEvent('page_view', {
+        page_title: 'QR Menü - Başkarci Pastanesi',
+        page_location: window.location.href,
+        event_category: 'engagement'
+    });
+}
+
+// Sayfa yüklendiğinde CSV'den veri yükle
+document.addEventListener('DOMContentLoaded', function() {
+    // Analytics tracking
+    trackPageLoad();
+    
+    loadMenuFromCSV().finally(() => {
+        // Yükleme tamamlandığında veya hata olduğunda loader'ı kaldır
+        document.body.classList.add('loaded');
+    });
+    
+    // Otomatik yenileme (eğer aktifse)
+    if (CONFIG.AUTO_REFRESH_INTERVAL > 0) {
+        setInterval(() => {
+            loadMenuFromCSV();
+        }, CONFIG.AUTO_REFRESH_INTERVAL);
+    }
+}); 
